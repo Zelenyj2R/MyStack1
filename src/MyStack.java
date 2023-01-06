@@ -45,9 +45,9 @@ public class MyStack<T> implements StackInterface<T> {
     }
     @Override
     public void clear() {
-        for (int i = 0; i <= size; i++)
-            array[size] = null;
-        size = 0;
+            array = new Object[capacity];
+            size = 0;
+        }
     }
 
-}
+
