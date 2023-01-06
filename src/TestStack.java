@@ -1,18 +1,14 @@
-public class TestStack { 
+public class TestStack {
     public static void main(String[] args) {
         MyStack<String> myStack = new MyStack<>();
         myStack.push("Nightingale");
         myStack.push("Heron");
         myStack.push("Tit");
-        System.out.println("myStack" + myStack.size());
-        System.out.println("myStack " + myStack.peek(0));
+        System.out.println(myStack.peek());
+        System.out.println("Let us use Pop");
         myStack.pop();
-        myStack.clear();
-        System.out.println("myStack " + myStack.size());
-        myStack.push("Nightingale");
-        myStack.push("Heron");
-        myStack.push("Tit");
-        System.out.println("myStack" + myStack.size());
+        System.out.println("This is our new Stack after Pop");
+        myStack.printMyStack();
     }
 }
 
