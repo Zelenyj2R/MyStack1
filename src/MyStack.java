@@ -26,7 +26,7 @@ public class MyStack<T> implements StackInterface<T> {
         if (size == 0) {
             throw new RuntimeException("Nothing to pool! Stack is empty!");
         }
-        var forReturn = array[0];
+        var lastReturn = array[0];
         array[0] = null;
         size--;
         int countNewStack = 0;
@@ -37,7 +37,7 @@ public class MyStack<T> implements StackInterface<T> {
             }
         }
         array = newElementRemove.clone();
-        return (T) forReturn;
+        return (T) lastReturn;
     }
     @Override
     public int size() {
